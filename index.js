@@ -38,8 +38,8 @@ app.use(cors({
 // Routes
 app.use('/api/auth', authRoutes);
 app.use('/api/blog', blogRouter);
-app.use('/admin', adminRouter);
-app.use('/', stripeRouter);
+app.use('/api/admin', adminRouter);
+app.use('/api', stripeRouter);
 
 app.get('/', (req, res) => {
     res.send("Backend Deployed Successfully");
