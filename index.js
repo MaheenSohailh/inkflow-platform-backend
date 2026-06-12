@@ -39,7 +39,7 @@ app.use(cors({
 app.use('/api/auth', authRoutes);
 app.use('/api/blog', blogRouter);
 app.use('/admin', adminRouter);
-app.use('/api', stripeRouter);
+app.use('/', stripeRouter);
 
 app.get('/', (req, res) => {
     res.send("Backend Deployed Successfully");
